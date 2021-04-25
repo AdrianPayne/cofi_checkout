@@ -33,7 +33,8 @@ class Checkout:
             # Group required codes as many times as it be required
             list_item_required = []
             for item in discount['items']:
-                [list_item_required.append(item) for i in range(discount['items'][item])]
+                for i in range(discount['items'][item]):
+                    list_item_required.append(item)
 
             # Aux variable to check codes for every discount
             list_product_temp = list_products[:]
